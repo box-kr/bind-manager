@@ -11,6 +11,10 @@
 
 </div>
 
+<div align="center">
+  <img src="main_window.png" width="800" alt="Bind Manager Main Window">
+</div>
+
 ---
 
 ## 📥 설치 방법 (Homebrew)
@@ -64,6 +68,9 @@ brew upgrade bind-manager
 ---
 
 ## 🛒 최근 업데이트 & 릴리즈 노트
+
+**v1.0.3 (빌드 프로세스 개선)**
+- **앱(프로세스)이름에 특수문자 노출 오류 수정**: 특정 앱(프로세스)의 경우 특수문자가 보이는 문제를 수정
 
 **v1.0.2 (UI/UX 개선: 프로세스 종료 애니메이션 및 스크롤 유지)**
 - **스크롤 위치 유지**: 프로세스 Kill 또는 Docker 컨테이너 Stop 시, 전체 목록이 갱신되면서 화면이 최상단으로 튕기던 현상을 수정했습니다. 이제 기존 스크롤 위치가 완벽하게 유지됩니다.

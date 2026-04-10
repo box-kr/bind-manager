@@ -13,6 +13,10 @@
 
 <div align="center">
   <img src="main_window.png" width="800" alt="Bind Manager Main Window">
+  <img src="docker1.png" width="800" alt="Bind Manager Docker Tab#1 Window">
+  <img src="docker2.png" width="800" alt="Bind Manager Docker Tab#2 Window">
+  <img src="docker3.png" width="800" alt="Bind Manager Docker Tab#3 Window">
+  <img src="docker4.png" width="800" alt="Bind Manager Docker Tab#4 Window">
 </div>
 
 ---
@@ -68,6 +72,12 @@ brew upgrade bind-manager
 ---
 
 ## 🛒 최근 업데이트 & 릴리즈 노트
+
+**v1.0.4 (Docker 탭 분리 및 상세 정보 제공,시스템 정보 네이티브 수집 전환)**
+- **All / Docker 탭 UI 분리**: 메인 화면 상단에 탭을 추가하여 전체 프로세스 목록과 Docker 관련 항목을 분리해서 볼 수 있도록 개선했습니다.
+- **Docker 하위 탭 구성**: Docker 탭 내에 Containers, Images, Volumes 탭을 신설하여 세부 정보를 제공하고, 미사용 중인 이미지와 볼륨을 앱 내에서 직접 삭제할 수 있는 기능을 추가했습니다.
+- **성능 및 안정성 대폭 향상**: 기존에 외부 쉘 명령어(`lsof`, `ps`, `docker` 등)를 호출하여 파싱하던 방식에서 벗어나, macOS 네이티브 C API(`libproc`)와 Docker Engine API(Unix Domain Socket)를 직접 통신하여 시스템 정보를 수집하도록 구조를 전면 개편했습니다. 이를 통해 불필요한 프로세스 생성을 줄이고 훨씬 빠르고 안정적으로 정보를 갱신합니다.
+
 
 **v1.0.3 (빌드 프로세스 개선)**
 - **앱(프로세스)이름에 특수문자 노출 오류 수정**: 특정 앱(프로세스)의 경우 특수문자가 보이는 문제를 수정
